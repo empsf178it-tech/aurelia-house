@@ -164,7 +164,7 @@ h1, h2, h3, h4, .font-serif {
 }
 
 .heading-display {
-  font-size: clamp(3rem, 7vw, 6.5rem);
+  font-size: clamp(1.85rem, 6vw, 6.5rem);
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -172,14 +172,14 @@ h1, h2, h3, h4, .font-serif {
 }
 
 .heading-1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(1.65rem, 5vw, 4.5rem);
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 
 .heading-2 {
-  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-size: clamp(1.45rem, 3.5vw, 3.2rem);
   font-weight: 400;
   letter-spacing: 0.02em;
 }
@@ -1463,6 +1463,9 @@ h1, h2, h3, h4, .font-serif {
               box-shadow 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), 
               border-color 0.4s ease;
   color: var(--color-ivory);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .experience-card::after {
@@ -1500,7 +1503,7 @@ h1, h2, h3, h4, .font-serif {
 .experience-img {
   aspect-ratio: 16 / 10;
   width: 100%;
-  min-height: 220px;
+  min-height: 200px;
   object-fit: cover;
   background-color: var(--color-charcoal);
   display: block;
@@ -1513,12 +1516,15 @@ h1, h2, h3, h4, .font-serif {
 }
 
 .experience-content {
-  padding: 2.2rem;
+  padding: 2rem 1.8rem 1.8rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .experience-tag {
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
   color: var(--color-stone);
   text-transform: uppercase;
   margin-bottom: 0.6rem;
@@ -1528,13 +1534,13 @@ h1, h2, h3, h4, .font-serif {
 
 .experience-card:hover .experience-tag {
   color: #d4af37;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.22em;
 }
 
 .experience-title {
   font-family: var(--font-serif);
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.85rem;
+  margin-bottom: 0.8rem;
   transition: color 0.4s ease, transform 0.4s ease;
 }
 
@@ -1544,10 +1550,47 @@ h1, h2, h3, h4, .font-serif {
 }
 
 .experience-desc {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--color-stone-light);
-  line-height: 1.7;
+  line-height: 1.65;
   margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.experience-content .btn {
+  margin-top: auto;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  padding: 0.95rem 1.2rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 992px) {
+  .experience-content {
+    padding: 1.5rem 1.25rem 1.4rem 1.25rem;
+  }
+  
+  .experience-title {
+    font-size: 1.55rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .experience-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+  }
+
+  .experience-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+  }
+
+  .experience-content .btn {
+    padding: 0.85rem 0.8rem !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.1em !important;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -3554,6 +3597,77 @@ body.special-bar-active .page-hero {
 .contact-info-row-value a:hover {
   color: var(--color-gold);
   text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   34. MOBILE (360px - 480px) CONTACT & HERO RESPONSIVE FIXES
+   -------------------------------------------------------------------------- */
+@media (max-width: 576px) {
+  .page-hero {
+    padding-top: calc(var(--header-height) + 2rem) !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .page-hero-content {
+    padding: 0 0.5rem;
+  }
+
+  .heading-display {
+    font-size: clamp(1.65rem, 8vw, 2.5rem) !important;
+    letter-spacing: 0.01em !important;
+    word-break: break-word;
+  }
+
+  .heading-1 {
+    font-size: clamp(1.5rem, 7vw, 2.2rem) !important;
+    letter-spacing: 0.02em !important;
+    word-break: break-word;
+  }
+
+  .subheading {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.2em !important;
+  }
+
+  .contact-info-row {
+    padding: 1rem 1.1rem !important;
+    gap: 0.85rem !important;
+  }
+
+  .contact-info-row-icon {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+  }
+
+  .contact-info-row-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .contact-info-row-value {
+    font-size: 0.9rem !important;
+    line-height: 1.45 !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .heading-display {
+    font-size: 1.55rem !important;
+  }
+
+  .heading-1 {
+    font-size: 1.45rem !important;
+  }
+
+  .body-lead {
+    font-size: 0.92rem !important;
+  }
 }
 
 /* Reduced Motion Support */
