@@ -1,12 +1,12 @@
-# AURELIA HOUSE — RESTAURANT WEBSITE
+﻿# AURELIA — RESTAURANT WEBSITE
 > **Tagline:** SLOW FOOD. BEAUTIFUL MOMENTS.
 
-Aurelia House is a premium, cinematic multi-page restaurant website built exclusively with pure **HTML5**, **CSS3**, and **Vanilla JavaScript ES6+**.
+AURELIA is a premium, cinematic multi-page restaurant website built exclusively with pure **HTML5**, **CSS3**, and **Vanilla JavaScript ES6+**.
 
 ---
 
 ## 🏛️ Brand Identity
-- **Name:** AURELIA HOUSE
+- **Name:** AURELIA
 - **Tagline:** SLOW FOOD. BEAUTIFUL MOMENTS.
 - **Personality:** Sophisticated, Contemporary, Warm, Culinary, Elegant, Intimate, Artistic, Premium.
 - **Color Palette:**
@@ -42,3 +42,4 @@ Aurelia House is a premium, cinematic multi-page restaurant website built exclus
   - Page transition system.
   - Fullscreen mobile overlay menu.
   - Accessible, responsive, and performance-optimized.
+

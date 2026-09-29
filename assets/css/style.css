@@ -7,35 +7,36 @@
    01. DESIGN TOKENS & CSS VARIABLES
    -------------------------------------------------------------------------- */
 :root {
-  /* Color Palette */
-  --color-ivory: #F5F1E8;
-  --color-ivory-light: #FAF8F5;
-  --color-ivory-dark: #EDE8DC;
+  /* Color Palette — Royal Midnight & 24K Metallic Gold Elevation */
+  --color-ivory: #FFFDF9;
+  --color-ivory-light: #FFFFFF;
+  --color-ivory-dark: #F3EFE6;
   
-  --color-charcoal: #1B1B19;
-  --color-charcoal-light: #252522;
-  --color-charcoal-card: #2D2D29;
-  --color-charcoal-muted: #3D3D38;
+  --color-charcoal: #0F1117;
+  --color-charcoal-light: #181B24;
+  --color-charcoal-card: #1F2330;
+  --color-charcoal-muted: #2A2F40;
 
-  --color-olive: #59604A;
-  --color-olive-light: #727A60;
+  --color-olive: #4A5643;
+  --color-olive-light: #65755C;
   
   --color-stone: #B8AA96;
-  --color-stone-light: #D5CCC0;
-  --color-stone-dark: #8C7E6A;
+  --color-stone-light: #E4DDD3;
+  --color-stone-dark: #7D7364;
 
-  --color-terracotta: #A9684F;
-  --color-terracotta-hover: #BF785D;
+  --color-terracotta: #E07A49;
+  --color-terracotta-hover: #F08B5A;
 
-  --color-bronze: #92785B;
-  --color-gold: #C5A059;
-  --color-gold-dark: #9E7B3B;
-  --color-gold-light: #E6C865;
+  --color-bronze: #B38E5A;
+  --color-gold: #E5C158;
+  --color-gold-dark: #B8932B;
+  --color-gold-light: #F7D978;
+  --gold-gradient: linear-gradient(135deg, #F7D978 0%, #E5C158 50%, #B8932B 100%);
 
-  --color-text-dark: #1B1B19;
-  --color-text-muted: #6E6B64;
-  --color-text-light: #F5F1E8;
-  --color-text-light-muted: #B8AA96;
+  --color-text-dark: #0F1117;
+  --color-text-muted: #5C5850;
+  --color-text-light: #FFFDF9;
+  --color-text-light-muted: #D1C7B7;
 
   /* Typography */
   --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
@@ -191,16 +192,16 @@ h1, h2, h3, h4, .font-serif {
 .subheading {
   font-family: var(--font-sans);
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.25em;
-  color: var(--color-stone-dark);
+  letter-spacing: 0.28em;
+  color: var(--color-gold);
   display: inline-block;
   margin-bottom: var(--spacing-sm);
 }
 
 .subheading-light {
-  color: var(--color-stone);
+  color: #F7D978;
 }
 
 .body-lead {
@@ -808,50 +809,54 @@ h1, h2, h3, h4, .font-serif {
 }
 
 .btn-primary {
-  background-color: var(--color-terracotta);
-  color: #ffffff;
-  border: 1px solid var(--color-terracotta);
+  background: var(--gold-gradient);
+  color: #0F1117;
+  border: 1px solid #E5C158;
+  font-weight: 700;
+  box-shadow: 0 6px 20px rgba(229, 193, 88, 0.25);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-terracotta-hover);
-  border-color: #d4af37;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F7D978 50%, #E5C158 100%);
+  border-color: #F7D978;
+  color: #0F1117;
   transform: translateY(-4px);
-  box-shadow: 0 14px 32px rgba(169, 104, 79, 0.38), 0 0 20px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 14px 32px rgba(229, 193, 88, 0.45), 0 0 25px rgba(247, 217, 120, 0.6);
 }
 
 .btn-secondary {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.08);
   color: var(--color-ivory);
-  border: 1px solid var(--color-stone);
+  border: 1.5px solid var(--color-gold);
+  backdrop-filter: blur(8px);
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-ivory);
-  color: var(--color-charcoal);
-  border-color: var(--color-ivory);
+  background: var(--gold-gradient);
+  color: #0F1117;
+  border-color: #F7D978;
   transform: translateY(-4px);
-  box-shadow: 0 14px 32px rgba(245, 241, 232, 0.25), 0 0 22px rgba(212, 175, 55, 0.35);
+  box-shadow: 0 14px 32px rgba(229, 193, 88, 0.4), 0 0 22px rgba(247, 217, 120, 0.5);
 }
 
 .btn-dark {
   background-color: var(--color-charcoal);
   color: var(--color-ivory);
-  border: 1px solid var(--color-charcoal);
+  border: 1px solid var(--color-gold);
 }
 
 .btn-dark:hover {
-  background-color: var(--color-charcoal-light);
-  border-color: #d4af37;
-  color: #ffffff;
+  background: var(--gold-gradient);
+  border-color: #F7D978;
+  color: #0F1117;
   transform: translateY(-4px);
-  box-shadow: 0 14px 32px rgba(27, 27, 25, 0.5), 0 0 22px rgba(212, 175, 55, 0.28);
+  box-shadow: 0 14px 32px rgba(15, 17, 23, 0.5), 0 0 22px rgba(229, 193, 88, 0.4);
 }
 
 .btn-outline-dark {
   background-color: transparent;
   color: var(--color-charcoal);
-  border: 1px solid var(--color-charcoal);
+  border: 1.5px solid var(--color-charcoal);
 }
 
 .btn-outline-dark:hover {
@@ -899,20 +904,20 @@ h1, h2, h3, h4, .font-serif {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.55;
-  transform: scale(1.08);
+  opacity: 0.85;
+  transform: scale(1.05);
   transition: transform 12s ease-out;
 }
 
 .hero-fullscreen:hover .hero-bg {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(27, 27, 25, 0.3) 0%, rgba(27, 27, 25, 0.75) 100%),
-              linear-gradient(to bottom, rgba(27, 27, 25, 0.4), rgba(27, 27, 25, 0.9));
+  background: radial-gradient(circle at center, rgba(15, 15, 12, 0.15) 0%, rgba(15, 15, 12, 0.55) 100%),
+              linear-gradient(to bottom, rgba(15, 15, 12, 0.3), rgba(15, 15, 12, 0.65));
 }
 
 .hero-content {
@@ -1012,13 +1017,13 @@ h1, h2, h3, h4, .font-serif {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.35;
+  opacity: 0.65;
 }
 
 .page-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(27,27,25,0.6), rgba(27,27,25,0.95));
+  background: linear-gradient(to bottom, rgba(27,27,25,0.35), rgba(27,27,25,0.75));
 }
 
 .page-hero-content {
@@ -2334,7 +2339,7 @@ textarea.form-control {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.45;
+  opacity: 0.85;
   z-index: 0;
 }
 
@@ -2345,7 +2350,7 @@ textarea.form-control {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.45;
+  opacity: 0.85;
   z-index: -1;
 }
 

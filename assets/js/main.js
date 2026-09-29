@@ -1,5 +1,5 @@
-/**
- * AURELIA HOUSE — RESTAURANT JAVASCRIPT SYSTEM
+﻿/**
+ * AURELIA — RESTAURANT JAVASCRIPT SYSTEM
  * Strictly Vanilla JavaScript (ES6+)
  */
 
@@ -691,3 +691,4 @@ function initTeamCards() {
     }
   });
 }
+
