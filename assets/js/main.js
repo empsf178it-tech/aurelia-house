@@ -1,4 +1,4 @@
-﻿/**
+/**
  * AURELIA — RESTAURANT JAVASCRIPT SYSTEM
  * Strictly Vanilla JavaScript (ES6+)
  */
@@ -393,22 +393,26 @@ function initHorizontalScroll() {
    -------------------------------------------------------------------------- */
 function initBackToTop() {
   const backToTopBtn = document.getElementById('back-to-top');
-  if (!backToTopBtn) return;
+  const waBtn = document.getElementById('whatsapp-float-btn') || document.querySelector('.whatsapp-float');
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
-      backToTopBtn.classList.add('visible');
+      if (backToTopBtn) backToTopBtn.classList.add('visible');
+      if (waBtn) waBtn.classList.add('shift-up');
     } else {
-      backToTopBtn.classList.remove('visible');
+      if (backToTopBtn) backToTopBtn.classList.remove('visible');
+      if (waBtn) waBtn.classList.remove('shift-up');
     }
   });
 
-  backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
-  });
+  }
 }
 
 /* --------------------------------------------------------------------------
