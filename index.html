@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AURELIA HOUSE — Sophisticated contemporary restaurant focused on exceptional food, thoughtful ingredients, and elegant dining experiences. Slow Food. Beautiful Moments.">
+  <title>AURELIA HOUSE — Slow Food. Beautiful Moments.</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true">
+    <span class="custom-cursor-text"></span>
+  </div>
+
+  <!-- Page Transition & Culinary Preloader -->
+  <div id="page-transition" class="active" aria-hidden="true">
+    <div class="loader-content">
+      <div class="loader-emblem-wrapper">
+        <div class="loader-ring"></div>
+        <svg class="loader-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32 10C33.1046 10 34 9.10457 34 8C34 6.89543 33.1046 6 32 6C30.8954 6 30 6.89543 30 8C30 9.10457 30.8954 10 32 10Z" fill="url(#gold-grad)"/>
+          <path d="M14 38C14 26.9543 22.0589 18 32 18C41.9411 18 50 26.9543 50 38H14Z" stroke="url(#gold-grad)" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M10 42H54V44C54 45.1046 53.1046 46 52 46H12C10.8954 46 10 45.1046 10 44V42Z" fill="url(#gold-grad)"/>
+          <path class="steam-line steam-1" d="M26 14C26 14 27 12 26 10" stroke="url(#gold-grad)" stroke-width="1.8" stroke-linecap="round"/>
+          <path class="steam-line steam-2" d="M32 13C32 13 33 11 32 9" stroke="url(#gold-grad)" stroke-width="1.8" stroke-linecap="round"/>
+          <path class="steam-line steam-3" d="M38 14C38 14 39 12 38 10" stroke="url(#gold-grad)" stroke-width="1.8" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="gold-grad" x1="10" y1="6" x2="54" y2="46" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#F2D685"/>
+              <stop offset="0.5" stop-color="#C59B27"/>
+              <stop offset="1" stop-color="#8C6D1F"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="loader-subtitle">CURATING YOUR EXPERIENCE</div>
+      <div class="loader-progress-track">
+        <div class="loader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Sticky Header -->
+  <header class="site-header theme-dark">
+    <div class="container header-container">
+      <a href="index.html" class="header-logo">
+        <svg class="brand-logo-symbol" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M16 4C16.5523 4 17 3.55228 17 3C17 2.44772 16.5523 2 16 2C15.4477 2 15 2.44772 15 3C15 3.55228 15.4477 4 16 4Z" fill="currentColor"/>
+          <path d="M7 19C7 14.0294 11.0294 10 16 10C20.9706 10 25 14.0294 25 19H7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M5 21H27V23C27 23.5523 26.5523 24 26 24H6C5.44772 24 5 23.5523 5 23V21Z" fill="currentColor"/>
+        </svg>
+        <span>AURELIA HOUSE</span>
+      </a>
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link active">HOME</a>
+        <a href="about.html" class="nav-link">ABOUT</a>
+        <a href="menu.html" class="nav-link">MENU</a>
+        <a href="kitchen.html" class="nav-link">KITCHEN</a>
+        <a href="experiences.html" class="nav-link">EXPERIENCES</a>
+        <a href="gallery.html" class="nav-link">GALLERY</a>
+        <a href="contact.html" class="nav-link">CONTACT</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="reservations.html" class="btn-reserve-header" data-magnetic>RESERVE <span class="btn-arrow">→</span></a>
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Navigation Overlay -->
+  <div class="mobile-nav-overlay">
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link active">HOME</a>
+      <a href="about.html" class="mobile-nav-link">ABOUT</a>
+      <a href="menu.html" class="mobile-nav-link">MENU</a>
+      <a href="kitchen.html" class="mobile-nav-link">KITCHEN</a>
+      <a href="experiences.html" class="mobile-nav-link">EXPERIENCES</a>
+      <a href="gallery.html" class="mobile-nav-link">GALLERY</a>
+      <a href="contact.html" class="mobile-nav-link">CONTACT</a>
+    </nav>
+    <div class="mobile-nav-cta">
+      <a href="reservations.html" class="btn btn-primary">RESERVE A TABLE <span class="btn-arrow">→</span></a>
+    </div>
+  </div>
+
+  <!-- Today's Special Scrolling Announcement Bar -->
+  <div class="special-bar" id="special-bar" role="marquee" aria-label="Today's special offers">
+    <div class="special-bar-inner">
+      <div class="special-bar-track" id="special-bar-track">
+        <!-- Items duplicated for seamless loop -->
+        <span class="special-bar-item"><span class="special-star">✦</span> TODAY'S SPECIAL <span class="special-dot"></span> <strong>Seared Wild Sea Bass</strong> <span class="special-dot"></span> Saffron broth · Shaved fennel · Citrus oil</span>
+        <span class="special-bar-item"><span class="special-star">✦</span> CHEF'S PAIRING <span class="special-dot"></span> <strong>Burgundy Pinot Noir 2019</strong> <span class="special-dot"></span> Limited allocation · Ask your sommelier</span>
+        <span class="special-bar-item"><span class="special-star">✦</span> SEASONAL TASTING MENU <span class="special-dot"></span> <strong>7 Courses</strong> <span class="special-dot"></span> Available nightly from 6:30 PM · Reservation required</span>
+        <span class="special-bar-item"><span class="special-star">✦</span> WEEKEND BRUNCH <span class="special-dot"></span> <strong>Saturday & Sunday</strong> <span class="special-dot"></span> 10:00 AM – 2:00 PM · Walk-ins welcome</span>
+        <!-- Duplicate for seamless marquee -->
+        <span class="special-bar-item"><span class="special-star">✦</span> TODAY'S SPECIAL <span class="special-dot"></span> <strong>Seared Wild Sea Bass</strong> <span class="special-dot"></span> Saffron broth · Shaved fennel · Citrus oil</span>
+        <span class="special-bar-item"><span class="special-star">✦</span> CHEF'S PAIRING <span class="special-dot"></span> <strong>Burgundy Pinot Noir 2019</strong> <span class="special-dot"></span> Limited allocation · Ask your sommelier</span>
+        <span class="special-bar-item"><span class="special-star">✦</span> SEASONAL TASTING MENU <span class="special-dot"></span> <strong>7 Courses</strong> <span class="special-dot"></span> Available nightly from 6:30 PM · Reservation required</span>
+        <span class="special-bar-item"><span class="special-star">✦</span> WEEKEND BRUNCH <span class="special-dot"></span> <strong>Saturday & Sunday</strong> <span class="special-dot"></span> 10:00 AM – 2:00 PM · Walk-ins welcome</span>
+      </div>
+    </div>
+    <button class="special-bar-close" id="special-bar-close" aria-label="Dismiss announcement bar">✕</button>
+  </div>
+
+  <main>
+    <!-- 11 HERO SECTION -->
+    <section class="hero-fullscreen">
+      <!-- Video Background with image fallback -->
+      <video class="hero-video-bg" autoplay muted loop playsinline poster="assets/images/hero_interior.jpg">
+        <source src="https://player.vimeo.com/progressive_redirect/playback/512346487/rendition/360p/file.mp4?loc=external" type="video/mp4">
+      </video>
+      <img src="assets/images/hero_interior.jpg" alt="Aurelia House Evening Restaurant Atmosphere" class="hero-video-fallback">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <span class="hero-tagline">SLOW FOOD. BEAUTIFUL MOMENTS.</span>
+        <h1 class="hero-title shimmer-heading-light">A TABLE SHAPED BY INTENTION</h1>
+        <p class="hero-description">
+          A contemporary table shaped by thoughtful cooking, seasonal ingredients, and good company. Welcome to an evening worth savoring.
+        </p>
+        <div class="hero-actions">
+          <a href="menu.html" class="btn btn-primary" data-magnetic data-cursor="explore">EXPLORE THE MENU <span class="btn-arrow">→</span></a>
+          <a href="reservations.html" class="btn btn-secondary" data-magnetic>RESERVE A TABLE <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12 THE RESTAURANT SECTION -->
+    <section class="section-padding section-ivory">
+      <div class="container grid-2">
+        <div class="image-wrapper image-mask-wrapper reveal-on-scroll">
+          <div class="image-mask-reveal"></div>
+          <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1200&q=85" alt="Aurelia House Interior Dining Table" data-cursor="taste">
+        </div>
+        <div class="reveal-on-scroll" style="transition-delay: 0.2s;">
+          <span class="subheading">OUR SANCTUARY</span>
+          <h2 class="heading-1 shimmer-heading" style="margin-bottom: 1.5rem;">A TABLE<br>WORTH SITTING AT.</h2>
+          <p class="body-lead" style="margin-bottom: 1.8rem;">
+            Aurelia House is a place for thoughtful food, warm hospitality and evenings that deserve to last a little longer.
+          </p>
+          <p style="color: var(--color-text-muted); margin-bottom: 2.5rem; line-height: 1.8;">
+            We believe that dining is an artistic dialogue between kitchen and guest. Every plate reflects our reverence for nature's seasonal pace, brought to life through precise contemporary techniques and intimate atmosphere.
+          </p>
+          <a href="about.html" class="btn btn-outline-dark" data-magnetic>DISCOVER OUR STORY <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13 SIGNATURE DISHES SECTION -->
+    <section class="section-padding section-ivory-dark">
+      <div class="container">
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 4rem auto;" class="reveal-on-scroll">
+          <span class="subheading">SEASONAL HIGHLIGHTS</span>
+          <h2 class="heading-1 shimmer-heading">FROM OUR TABLE</h2>
+          <p class="body-lead">Plates designed to honor seasonal produce, layered textures, and memorable flavors.</p>
+        </div>
+
+        <div class="grid-4 stagger-parent reveal-on-scroll">
+          <!-- Dish 1 -->
+          <article class="dish-card stagger-item" data-cursor="taste">
+            <div class="dish-image-box">
+              <img src="assets/images/signature_vegetables.jpg" alt="Charred Seasonal Vegetables">
+              <span class="dish-badge">STARTER</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title">Charred Vegetables</h3>
+              <p class="dish-description">Heirloom carrots, baby beets with smoked yogurt, wild herbs, and toasted pumpkin seeds.</p>
+              <div class="dish-ingredients">
+                <span>INGREDIENTS</span>
+                <span>YOGURT · HERBS · SEEDS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 2 -->
+          <article class="dish-card stagger-item" data-cursor="taste">
+            <div class="dish-image-box">
+              <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1200&q=85" alt="Handcrafted House Pasta">
+              <span class="dish-badge">MAIN</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title">House Tagliatelle</h3>
+              <p class="dish-description">Handcrafted pasta tossed with shaved black truffle, aged alpine cheese, and cultured butter.</p>
+              <div class="dish-ingredients">
+                <span>INGREDIENTS</span>
+                <span>TRUFFLE · PARMESAN · BUTTER</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 3 -->
+          <article class="dish-card stagger-item" data-cursor="taste">
+            <div class="dish-image-box">
+              <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=1200&q=85" alt="Fire-Roasted Chicken">
+              <span class="dish-badge">MAIN</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title">Fire-Roasted Chicken</h3>
+              <p class="dish-description">Organic pasture-raised chicken with roasted garlic jus, charred scallions, and lemon thyme.</p>
+              <div class="dish-ingredients">
+                <span>INGREDIENTS</span>
+                <span>GARLIC JUS · THYME</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 4 -->
+          <article class="dish-card stagger-item" data-cursor="taste">
+            <div class="dish-image-box">
+              <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=1200&q=85" alt="Dark Chocolate Caramel Dessert">
+              <span class="dish-badge">DESSERT</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title">Dark Chocolate Tart</h3>
+              <p class="dish-description">70% single-origin chocolate ganache, smoked sea salt caramel, and roasted hazelnut crunch.</p>
+              <div class="dish-ingredients">
+                <span>INGREDIENTS</span>
+                <span>CHOCOLATE · CARAMEL · SALT</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem;" class="reveal-on-scroll">
+          <a href="menu.html" class="btn btn-primary" data-magnetic data-cursor="explore">VIEW FULL MENU <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14 INGREDIENT STORY SECTION -->
+    <section class="section-padding section-dark">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; flex-wrap: wrap; gap: 1.5rem;" class="reveal-on-scroll">
+          <div>
+            <span class="subheading subheading-light">PROVENANCE & INTEGRITY</span>
+            <h2 class="heading-1 shimmer-heading-light" style="color: var(--color-ivory);">GOOD COOKING STARTS<br>BEFORE THE PAN.</h2>
+          </div>
+          <p class="body-lead body-lead-light" style="max-width: 450px;">
+            We collaborate directly with local regenerative farmers, coastal foragers, and artisan producers.
+          </p>
+        </div>
+
+        <div class="ingredient-scroll-wrapper reveal-on-scroll">
+          <div class="ingredient-track">
+            <!-- Ingredient 1 -->
+            <div class="ingredient-item">
+              <div class="ingredient-img-box">
+                <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=800&q=85" alt="Fresh Heirloom Tomatoes">
+              </div>
+              <h3 class="ingredient-title">Heirloom Vegetables</h3>
+              <p class="ingredient-meta">Organically grown by Valley Organic Farms</p>
+            </div>
+            <!-- Ingredient 2 -->
+            <div class="ingredient-item">
+              <div class="ingredient-img-box">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=85" alt="Wild Foraged Mushrooms">
+              </div>
+              <h3 class="ingredient-title">Wild Mushrooms</h3>
+              <p class="ingredient-meta">Foraged daily from coastal pine forests</p>
+            </div>
+            <!-- Ingredient 3 -->
+            <div class="ingredient-item">
+              <div class="ingredient-img-box">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=85" alt="Fresh Garden Herbs">
+              </div>
+              <h3 class="ingredient-title">Culinary Herbs</h3>
+              <p class="ingredient-meta">Harvested every morning from our kitchen garden</p>
+            </div>
+            <!-- Ingredient 4 -->
+            <div class="ingredient-item">
+              <div class="ingredient-img-box">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=85" alt="Artisanal Olive Oil">
+              </div>
+              <h3 class="ingredient-title">Cold-Pressed Oils</h3>
+              <p class="ingredient-meta">Single-estate extra virgin olive oil</p>
+            </div>
+            <!-- Ingredient 5 -->
+            <div class="ingredient-item">
+              <div class="ingredient-img-box">
+                <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=85" alt="Fresh Seafood & Caviar">
+              </div>
+              <h3 class="ingredient-title">Day-Boat Catch</h3>
+              <p class="ingredient-meta">Sourced directly from sustainable local fisheries</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15 THE KITCHEN SECTION -->
+    <section class="section-padding section-dark" style="border-top: 1px solid rgba(255,255,255,0.08);">
+      <div class="container grid-2">
+        <div class="reveal-on-scroll">
+          <span class="subheading subheading-light">THE CRAFT</span>
+          <h2 class="heading-1 shimmer-heading-light" style="color: var(--color-ivory); margin-bottom: 1.5rem;">COOKED WITH<br>INTENTION.</h2>
+          <p class="body-lead body-lead-light" style="margin-bottom: 2rem;">
+            Our kitchen runs on timing, heat, and quiet focus. We believe simplicity takes time.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2.5rem;">
+            <div style="border-left: 2px solid var(--color-stone); padding-left: 1.2rem;">
+              <h4 style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--color-ivory); margin-bottom: 0.3rem;">Open Fire & Slow Charcoal</h4>
+              <p style="font-size: 0.9rem; color: var(--color-stone-light);">Natural wood smoke enhances rather than masks original ingredient profiles.</p>
+            </div>
+            <div style="border-left: 2px solid var(--color-stone); padding-left: 1.2rem;">
+              <h4 style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--color-ivory); margin-bottom: 0.3rem;">Precise Plating</h4>
+              <p style="font-size: 0.9rem; color: var(--color-stone-light);">Every component has a purpose; no garnish is strictly decorative.</p>
+            </div>
+          </div>
+          <a href="kitchen.html" class="btn btn-secondary" data-magnetic>INSIDE OUR KITCHEN <span class="btn-arrow">→</span></a>
+        </div>
+
+        <div class="image-wrapper reveal-on-scroll" style="transition-delay: 0.2s;">
+          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=85" alt="Chef Garnishing Dish in Kitchen" data-cursor="taste">
+        </div>
+      </div>
+    </section>
+
+    <!-- 16 DINING MOMENTS SECTION -->
+    <section class="section-padding section-ivory">
+      <div class="container">
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 4rem auto;" class="reveal-on-scroll">
+          <span class="subheading">ATMOSPHERE</span>
+          <h2 class="heading-1">COME FOR THE FOOD.<br>STAY FOR THE MOMENT.</h2>
+          <p class="body-lead">Natural light fading into warm candlelight, glasses clinking, conversation slowing down.</p>
+        </div>
+
+        <div class="grid-3 stagger-parent reveal-on-scroll">
+          <div class="image-wrapper stagger-item" style="aspect-ratio: 4/5;">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=85" alt="Friends Dining at Table">
+          </div>
+          <div class="image-wrapper stagger-item" style="aspect-ratio: 4/5;">
+            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=85" alt="Botanical Craft Drink">
+          </div>
+          <div class="image-wrapper stagger-item" style="aspect-ratio: 4/5;">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=85" alt="Intimate Dining Ambience">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 17 FINAL CTA SECTION -->
+    <section class="hero-fullscreen" style="min-height: 80vh;">
+      <img src="assets/images/hero_interior.jpg" alt="Aurelia House Dining Room Evening" class="hero-bg">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <span class="hero-tagline">YOUR EVENING AWAITS</span>
+        <h2 class="hero-title">YOUR TABLE<br>IS WAITING.</h2>
+        <p class="hero-description">
+          Join us for an evening of slow food, thoughtful hospitality, and beautiful moments.
+        </p>
+        <div class="hero-actions">
+          <a href="reservations.html" class="btn btn-primary" data-magnetic>RESERVE A TABLE <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <h3 class="footer-brand-title">
+            <svg class="brand-logo-symbol" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M16 4C16.5523 4 17 3.55228 17 3C17 2.44772 16.5523 2 16 2C15.4477 2 15 2.44772 15 3C15 3.55228 15.4477 4 16 4Z" fill="currentColor"/>
+              <path d="M7 19C7 14.0294 11.0294 10 16 10C20.9706 10 25 14.0294 25 19H7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M5 21H27V23C27 23.5523 26.5523 24 26 24H6C5.44772 24 5 23.5523 5 23V21Z" fill="currentColor"/>
+            </svg>
+            <span>AURELIA HOUSE</span>
+          </h3>
+          <p class="footer-tagline">SLOW FOOD. BEAUTIFUL MOMENTS.</p>
+          <p style="color: var(--color-stone-light); font-size: 0.9rem; max-width: 320px; line-height: 1.7;">
+            A contemporary culinary destination celebrating seasonal produce, fire cooking, and genuine warmth.
+          </p>
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://tripadvisor.com" target="_blank" rel="noopener" class="social-icon" aria-label="TripAdvisor">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="7" cy="14" r="3"></circle>
+                <circle cx="17" cy="14" r="3"></circle>
+                <circle cx="7" cy="14" r="1"></circle>
+                <circle cx="17" cy="14" r="1"></circle>
+                <path d="M12 11c-2 0-3-1-3-2V7a3 3 0 0 1 6 0v2c0 1-1 2-3 2z"></path>
+                <path d="M4 14c-1.5 0-2.5-1-2.5-2.5S3 8 5.5 8H7"></path>
+                <path d="M20 14c1.5 0 2.5-1 2.5-2.5S21 8 18.5 8H17"></path>
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">NAVIGATION</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="menu.html" class="footer-link">Menu</a>
+            <a href="kitchen.html" class="footer-link">Our Kitchen</a>
+            <a href="experiences.html" class="footer-link">Experiences</a>
+            <a href="gallery.html" class="footer-link">Gallery</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+            <a href="reservations.html" class="footer-link">Reservations</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">HOURS</h4>
+          <div style="font-size: 0.9rem; color: var(--color-stone-light); display: flex; flex-direction: column; gap: 0.8rem;">
+            <div>
+              <strong style="color: var(--color-ivory); display: block;">LUNCH</strong>
+              12:00 PM – 3:00 PM
+            </div>
+            <div>
+              <strong style="color: var(--color-ivory); display: block;">DINNER</strong>
+              6:30 PM – 11:00 PM
+            </div>
+            <span style="font-size: 0.8rem; color: var(--color-stone-dark);">Open Tuesday – Sunday</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">LOCATION & CONTACT</h4>
+          <address style="font-style: normal; font-size: 0.9rem; color: var(--color-stone-light); line-height: 1.8;">
+            428 Artisan Way, Culinary District<br>
+            Metropolis, NY 10012<br><br>
+            <a href="mailto:hello@aureliahouse.example" class="footer-link">hello@aureliahouse.example</a><br>
+            <a href="tel:+15550192834" class="footer-link">+1 (555) 019-2834</a>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 AURELIA HOUSE. All rights reserved.</p>
+      </div>
+    </div>
+  <!-- WhatsApp Floating Chat Button -->
+  <a href="https://wa.me/15550192834?text=Hello%2C%20I'd%20like%20to%20make%20a%20reservation%20at%20Aurelia%20House."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat with us on WhatsApp"
+     id="whatsapp-float-btn">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <!-- Newsletter Popup Modal -->
+  <div class="newsletter-overlay" id="newsletter-overlay" role="dialog" aria-modal="true" aria-labelledby="newsletter-title">
+    <div class="newsletter-modal">
+      <button class="newsletter-close" id="newsletter-close" aria-label="Close newsletter popup">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80"
+           alt="Aurelia House dining experience"
+           class="newsletter-modal-image">
+      <div class="newsletter-modal-body" id="newsletter-form-section">
+        <span class="newsletter-modal-badge">✦ Exclusive Members Circle</span>
+        <h2 class="newsletter-modal-title" id="newsletter-title">Stay at the Table</h2>
+        <p class="newsletter-modal-text">Join our inner circle for seasonal menus, curated dining events, and first access to exclusive Aurelia House experiences. No noise — only the finest.</p>
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <input type="email"
+                 class="newsletter-input"
+                 id="newsletter-email"
+                 placeholder="Your email address"
+                 autocomplete="email"
+                 required
+                 aria-label="Email address for newsletter">
+          <button type="submit" class="newsletter-submit">JOIN</button>
+        </form>
+        <span class="newsletter-skip" id="newsletter-skip">No thank you, I'll visit another time</span>
+      </div>
+      <div class="newsletter-success" id="newsletter-success">
+        <span class="newsletter-success-icon">✦</span>
+        <h3 class="newsletter-success-title">Welcome to the Table.</h3>
+        <p class="newsletter-success-text">Thank you for joining our inner circle. Expect an elegant welcome in your inbox shortly.</p>
+        <div class="newsletter-ornament"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cookie Consent GDPR Banner -->
+  <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Cookie consent">
+    <div class="cookie-banner-content">
+      <span class="cookie-banner-icon">🍪</span>
+      <div class="cookie-banner-text">
+        <p class="cookie-banner-title">We Use Cookies</p>
+        <p class="cookie-banner-desc">We use cookies to enhance your browsing experience, serve personalized content, and analyse our traffic. By clicking "Accept All", you consent to our use of cookies. <a href="#" aria-label="Read our privacy policy">Privacy Policy</a></p>
+      </div>
+    </div>
+    <div class="cookie-banner-actions">
+      <button class="cookie-decline-btn" id="cookie-decline" aria-label="Decline cookies">Decline</button>
+      <button class="cookie-accept-btn" id="cookie-accept" aria-label="Accept all cookies">Accept All</button>
+    </div>
+  </div>
+
+  <!-- Back to Top Floating Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top" title="Back to top" data-magnetic>
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

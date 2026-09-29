@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page not found — AURELIA HOUSE. This table isn't set, but there's always another one waiting.">
+  <title>404 — Page Not Found | AURELIA HOUSE</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress & Cursor -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true"><span class="custom-cursor-text"></span></div>
+
+  <!-- Page Transition & Culinary Preloader -->
+  <div id="page-transition" class="active" aria-hidden="true">
+    <div class="loader-content">
+      <div class="loader-emblem-wrapper">
+        <div class="loader-ring"></div>
+        <svg class="loader-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32 10C33.1046 10 34 9.10457 34 8C34 6.89543 33.1046 6 32 6C30.8954 6 30 6.89543 30 8C30 9.10457 30.8954 10 32 10Z" fill="url(#gold-grad)"/>
+          <path d="M14 38C14 26.9543 22.0589 18 32 18C41.9411 18 50 26.9543 50 38H14Z" stroke="url(#gold-grad)" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M10 42H54V44C54 45.1046 53.1046 46 52 46H12C10.8954 46 10 45.1046 10 44V42Z" fill="url(#gold-grad)"/>
+          <path class="steam-line steam-1" d="M26 14C26 14 27 12 26 10" stroke="url(#gold-grad)" stroke-width="1.8" stroke-linecap="round"/>
+          <path class="steam-line steam-2" d="M32 13C32 13 33 11 32 9" stroke="url(#gold-grad)" stroke-width="1.8" stroke-linecap="round"/>
+          <path class="steam-line steam-3" d="M38 14C38 14 39 12 38 10" stroke="url(#gold-grad)" stroke-width="1.8" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="gold-grad" x1="10" y1="6" x2="54" y2="46" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#F2D685"/>
+              <stop offset="0.5" stop-color="#C59B27"/>
+              <stop offset="1" stop-color="#8C6D1F"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="loader-subtitle">CURATING YOUR EXPERIENCE</div>
+      <div class="loader-progress-track">
+        <div class="loader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Sticky Header -->
+  <header class="site-header theme-dark">
+    <div class="container header-container">
+      <a href="index.html" class="header-logo">
+        <svg class="brand-logo-symbol" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M16 4C16.5523 4 17 3.55228 17 3C17 2.44772 16.5523 2 16 2C15.4477 2 15 2.44772 15 3C15 3.55228 15.4477 4 16 4Z" fill="currentColor"/>
+          <path d="M7 19C7 14.0294 11.0294 10 16 10C20.9706 10 25 14.0294 25 19H7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M5 21H27V23C27 23.5523 26.5523 24 26 24H6C5.44772 24 5 23.5523 5 23V21Z" fill="currentColor"/>
+        </svg>
+        <span>AURELIA HOUSE</span>
+      </a>
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="about.html" class="nav-link">ABOUT</a>
+        <a href="menu.html" class="nav-link">MENU</a>
+        <a href="kitchen.html" class="nav-link">KITCHEN</a>
+        <a href="experiences.html" class="nav-link">EXPERIENCES</a>
+        <a href="gallery.html" class="nav-link">GALLERY</a>
+        <a href="contact.html" class="nav-link">CONTACT</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="reservations.html" class="btn-reserve-header" data-magnetic>RESERVE <span class="btn-arrow">→</span></a>
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav-overlay">
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">HOME</a>
+      <a href="about.html" class="mobile-nav-link">ABOUT</a>
+      <a href="menu.html" class="mobile-nav-link">MENU</a>
+      <a href="kitchen.html" class="mobile-nav-link">KITCHEN</a>
+      <a href="experiences.html" class="mobile-nav-link">EXPERIENCES</a>
+      <a href="gallery.html" class="mobile-nav-link">GALLERY</a>
+      <a href="contact.html" class="mobile-nav-link">CONTACT</a>
+    </nav>
+    <div class="mobile-nav-cta">
+      <a href="reservations.html" class="btn btn-primary">RESERVE A TABLE <span class="btn-arrow">→</span></a>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero-fullscreen">
+      <img src="assets/images/hero_interior.jpg" alt="Aurelia House Quiet Dining Room" class="hero-bg">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <span class="hero-tagline">ERROR 404</span>
+        <h1 class="hero-title">THIS TABLE<br>ISN'T SET.</h1>
+        <p class="hero-description">
+          “But there's always another one waiting.”
+        </p>
+        <div class="hero-actions">
+          <a href="index.html" class="btn btn-primary" data-magnetic>RETURN TO RESTAURANT <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back to Top Floating Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top" title="Back to top" data-magnetic>
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
